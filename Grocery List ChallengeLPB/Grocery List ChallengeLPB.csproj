@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Grocery_List_ChallengeLPB</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="grocery pic.jfif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="grocery pic.jfif" />
+  </ItemGroup>
+
+</Project>
