@@ -21,8 +21,8 @@
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="107,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18" TextAlignment="Center"/>
         <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="195,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="47,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="236,207,0,0" VerticalAlignment="Top" FontSize="18" Width="99"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="506,141,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="itemAmountLabel" Content="Label" HorizontalAlignment="Left" Margin="236,207,0,0" VerticalAlignment="Top" FontSize="18" Width="99"/>
+        <Label x:Name="resultLabel" Content="Label" HorizontalAlignment="Left" Margin="506,141,0,0" VerticalAlignment="Top" FontSize="18" Height="248" Width="221"/>
         <Button x:Name="addItemButton" Content="Add Item" HorizontalAlignment="Left" Margin="147,359,0,0" VerticalAlignment="Top" FontSize="18" Click="addItemButton_Click"/>
         <Button x:Name="itemAmountButton" Content="Add Amount of Items" HorizontalAlignment="Left" Margin="79,130,0,0" VerticalAlignment="Top" FontSize="18" Click="itemAmountButton_Click"/>
         <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="191,279,0,0" Text="Enter Item Price" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>

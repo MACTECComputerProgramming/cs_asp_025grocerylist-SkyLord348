@@ -24,42 +24,56 @@ namespace Grocery_List_ChallengeLPB
         {
             InitializeComponent();
         }
+
         
 
         //DON'T FORGET TO USE METHODS
 
-        //Show number of items stored code
+        
 
-        //Clear text boxes after every item
-
-        //Print out grocery list
+        
+        
+        
         private void itemAmountButton_Click(object sender, RoutedEventArgs e)
         {
+            string[] items = new string[5] { textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text};
+
+            items = temp1;
 
         }
 
         private void addItemButton_Click(object sender, RoutedEventArgs e)
         {
+            //Show number of items stored code
+            int itemAmount = 0; 
+
+            if (itemAmount == int.Parse(textBox1.Text))
+            {
+                //Print out grocery list
+                resultLabel.Content = "It worked!!";
+                
+
+            }
+            else
+            {
+                itemAmount++;
+
+                //Clear text boxes after every item
+
+                textBox2.Clear();
+                textBox3.Clear();
+
+                
+            }
+
+
 
         }
 
         //Make array(s)
-        string[] tempArray1 = new string[10];
-        string[] tempArray2 = new string[10];
-        private void GetNumberOfItems()
-        {
 
-        }
-        private void NumberOfItems()
-        {
-
-        }
-
-        private void GetItemPrices()
-        {
-
-        }
-
+        string[] temp1 = new string[5];
+        string[] temp2 = new string[5];
 
 
     }
