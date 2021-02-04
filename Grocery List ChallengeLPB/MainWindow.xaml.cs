@@ -36,9 +36,9 @@ namespace Grocery_List_ChallengeLPB
         
         private void itemAmountButton_Click(object sender, RoutedEventArgs e)
         {
-            string[] items = new string[5] { textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text};
+            //string[] items = new string[5] { textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text};
 
-            items = temp1;
+            //items = temp1;
 
         }
 
@@ -47,33 +47,31 @@ namespace Grocery_List_ChallengeLPB
             //Show number of items stored code
             int itemAmount = 0; 
 
-            if (itemAmount == int.Parse(textBox1.Text))
+            while (itemAmount < int.Parse(textBox1.Text))
             {
-                //Print out grocery list
-                resultLabel.Content = "It worked!!";
                 
-
-            }
-            else
-            {
+                //Print out grocery list
+                resultLabel.Content = "In while loop";
                 itemAmount++;
+
+                
 
                 //Clear text boxes after every item
 
-                textBox2.Clear();
-                textBox3.Clear();
+                //textBox2.Clear();
+                //textBox3.Clear();
 
                 
             }
-
+            resultLabel.Content = "Outside of while loop";
 
 
         }
 
         //Make array(s)
 
-        string[] temp1 = new string[5];
-        string[] temp2 = new string[5];
+       // string[] temp1 = new string[5];
+        //string[] temp2 = new string[5];
 
 
     }
