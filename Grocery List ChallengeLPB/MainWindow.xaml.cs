@@ -24,54 +24,76 @@ namespace Grocery_List_ChallengeLPB
         {
             InitializeComponent();
         }
-
-        
-
-        //DON'T FORGET TO USE METHODS
-
-        
-
-        
-        
+        //The array and variables
+        string[] itemListArray;
+        int num = 0;
+        double total = 0;   
         
         private void itemAmountButton_Click(object sender, RoutedEventArgs e)
         {
-            //string[] items = new string[5] { textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text, textBox1.Text};
-
-            //items = temp1;
-
+            //Hiding used button and starting list code
+            itemList();
+            textBlock2.Text = "Enter Item: ";
+            itemAmountButton.Visibility = Visibility.Hidden;
+            addItemButton.Visibility = Visibility.Visible;
         }
 
         private void addItemButton_Click(object sender, RoutedEventArgs e)
         {
-            //Show number of items stored code
-            int itemAmount = 0; 
-
-            while (itemAmount < int.Parse(textBox1.Text))
+            //Giving user info on what to do
+            if (num + 1 == itemListArray.Length)
             {
-                
-                //Print out grocery list
-                resultLabel.Content = "In while loop";
-                itemAmount++;
-
-                
-
-                //Clear text boxes after every item
-
-                //textBox2.Clear();
-                //textBox3.Clear();
-
-                
+               textBlock2.Text = "Push again to print";
             }
-            resultLabel.Content = "Outside of while loop";
+            else if (num+1 < itemListArray.Length)
+            {
+                textBlock2.Text = "Enter Item: " + (num + 2);
+            }
+
+            addItem();
+            textBox2.Clear();
+            textBox3.Clear();
+        }
+
+        private void addItem()
+        {
+            //Number of Items in list code
+            
+            if (num < itemListArray.Length)
+            {
+                total += Convert.ToDouble(textBox3.Text);
+                
+                //Printing items in list but not to screen
+                itemListArray[num] = textBox2.Text + string.Format(" {0:c}", 
+                    Convert.ToDouble(textBox3.Text));
+
+                num++;
+
+            }
+            //Printing out the total amount
+            else
+            {
+                foreach (string item in itemListArray)
+                {
+                    resultLabel.Content += item + "\n";
+                }
+
+                totalLabel.Content = string.Format("Total: {0:c}", total);
+            }
+
+
 
 
         }
 
-        //Make array(s)
+        private void itemList()
+        {
+            //Item list array
+            itemListArray = new string[Convert.ToInt32(textBox1.Text)];
+        }
 
-       // string[] temp1 = new string[5];
-        //string[] temp2 = new string[5];
+        
+
 
 
     }
